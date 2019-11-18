@@ -1,1 +1,1 @@
-# Autoencode-using-weight-mirrors
+# Autoencoder-using-weight-mirrors
