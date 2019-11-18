@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Deep-Learning-without-Weight-Transport
 ##### Mohamed Akrout, Collin Wilson, Peter C. Humphreys, Timothy Lillicrap, Douglas Tweed
 
@@ -94,3 +95,6 @@ The backpropagation code uses the same function structure of the backpagation co
   year={2019}
 }
 ```
+=======
+# Autoencoder-using-weight-mirrors
+>>>>>>> 29bf3a8184cba74d3c88e5520e843900822dd775
