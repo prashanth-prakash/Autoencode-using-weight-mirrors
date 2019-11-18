@@ -1,0 +1,67 @@
+
+====================
+Running the code with the dataset mnist:
+	learning algorithm: wm
+	batch_size: 32
+	learning rate: 0.05
+	n_epochs: 2000
+	test frequency: 1
+	size_layers: [784, 200, 2, 200, 784]
+====================
+
+
+Epoch 0 completed in 244.109s, loss: 198.774
+Test accuracy: 0.24%
+In layer 5 angle between matrices: 82.5730609503
+In layer 4 angle between matrices: 53.7353042373
+In layer 3 angle between matrices: 49.9597260551
+In layer 2 angle between matrices: 63.8766018284
+Angle between deltas: {'layer_1': 31.287540413816192, 'layer_3': 54.797636207143093, 'layer_2': 0.2624138005681862}
+
+Epoch 1 completed in 239.042s, loss: 192.594
+Test accuracy: 0.43%
+In layer 5 angle between matrices: 80.504897864
+In layer 4 angle between matrices: 45.6817209691
+In layer 3 angle between matrices: 24.1378542961
+In layer 2 angle between matrices: 60.9047631328
+Angle between deltas: {'layer_1': 28.480303865700762, 'layer_3': 63.872266578024494, 'layer_2': 1.7259688421368435}
+
+Epoch 2 completed in 241.373s, loss: 191.914
+Test accuracy: 0.29%
+In layer 5 angle between matrices: 78.6404562779
+In layer 4 angle between matrices: 40.7664048034
+In layer 3 angle between matrices: 16.5548566303
+In layer 2 angle between matrices: 60.0759538145
+Angle between deltas: {'layer_1': 31.402367823220338, 'layer_3': 70.471910834154258, 'layer_2': 2.6610647547195136}
+
+Epoch 3 completed in 250.283s, loss: 191.259
+Test accuracy: 0.29%
+In layer 5 angle between matrices: 77.180401417
+In layer 4 angle between matrices: 36.5468499627
+In layer 3 angle between matrices: 14.9751601765
+In layer 2 angle between matrices: 56.8990158127
+Angle between deltas: {'layer_1': 44.182594752584968, 'layer_3': 72.988572399001598, 'layer_2': 0.00074399062199785614}
+
+Epoch 4 completed in 244.201s, loss: 191.137
+Test accuracy: 0.96%
+In layer 5 angle between matrices: 76.0326425934
+In layer 4 angle between matrices: 33.2474334809
+In layer 3 angle between matrices: 13.6821179386
+In layer 2 angle between matrices: 55.5313900257
+Angle between deltas: {'layer_1': 27.348578794978458, 'layer_3': 70.947918254857612, 'layer_2': 6.6519938688297486}
+
+Epoch 5 completed in 240.271s, loss: 191.670
+Test accuracy: 0.27%
+In layer 5 angle between matrices: 75.1347842581
+In layer 4 angle between matrices: 30.0876362248
+In layer 3 angle between matrices: 13.40913215
+In layer 2 angle between matrices: 53.6294766685
+Angle between deltas: {'layer_1': 33.448686580105388, 'layer_3': 34.26638746474282, 'layer_2': 0.0}
+
+Epoch 6 completed in 249.115s, loss: 195.120
+Test accuracy: 0.16%
+In layer 5 angle between matrices: 73.8019106749
+In layer 4 angle between matrices: 29.3832600039
+In layer 3 angle between matrices: 12.8281464458
+In layer 2 angle between matrices: 51.4642547356
+Angle between deltas: {'layer_1': 40.568629115915016, 'layer_3': 17.486711347964064, 'layer_2': 0.0}

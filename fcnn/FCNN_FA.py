@@ -95,7 +95,7 @@ class FCNN_FA(FCNN_BP):
                      of all the layers. The variables del_b and del_w contains the gradients which
                      are used to update the forward weights and biases.
         Params:
-            - x, y: training feature and corresponding label
+            - x: training feature y:x same training feature for autoencoder model
             - eval_delta_angle: a boolean to determine if the angle between deltas should be computed
         Outputs:
             - del_b: gradient of bias

@@ -88,7 +88,7 @@ class FCNN_WM(FCNN_FA):
 
             for i in range(n_batches):
                 (batch_X, batch_y) = next(batch_iter)
-                batch_loss, delta_del_b, delta_del_w = self.backpropagate(batch_X, batch_y)
+                batch_loss, delta_del_b, delta_del_w = self.backpropagate(batch_X, batch_X)
                 epoch_loss.append(batch_loss)
                 del_b = delta_del_b
                 del_w = delta_del_w
@@ -119,5 +119,5 @@ class FCNN_WM(FCNN_FA):
             self.data['epoch_{}'.format(j)]['weight_angles'] = weights_angles
 
             # save results as a json file
-            with open(os.path.join(self.save_dir, 'results.json'), 'w') as f:
+            with open(os.path.join(self.save_dir, 'results_test.json'), 'w') as f:
                 json.dump(self.data, f)

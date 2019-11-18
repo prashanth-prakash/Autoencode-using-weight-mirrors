@@ -1,0 +1,19 @@
+
+====================
+Running the code with the dataset mnist:
+	learning algorithm: wm
+	batch_size: 32
+	learning rate: 0.05
+	n_epochs: 1
+	test frequency: 1
+	size_layers: [784, 200, 2, 200, 784]
+====================
+
+
+Epoch 0 completed in 244.180s, loss: 198.774
+Test accuracy: 0.24%
+In layer 5 angle between matrices: 82.5730609503
+In layer 4 angle between matrices: 53.7353042373
+In layer 3 angle between matrices: 49.9597260551
+In layer 2 angle between matrices: 63.8766018284
+Angle between deltas: {'layer_1': 31.287540413816192, 'layer_3': 54.797636207143093, 'layer_2': 0.2624138005681862}

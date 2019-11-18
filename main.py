@@ -20,7 +20,7 @@ def parse_args():
     parser.add_argument('--dataset', type=str, default='mnist', help="The dataset among `mnist` and `cifar10`", choices=['mnist', 'cifar10'])
     parser.add_argument('--algo', type=str, default='bp', help="The training algorithm", choices=['bp', 'fa', 'wm', 'kp'])
     parser.add_argument('--n_epochs', type=int, default='400', help="The number of epochs")
-    parser.add_argument('--size_hidden_layers', type=int, nargs='+', default=[1000, 200], help="The number of hidden neurons per layer")
+    parser.add_argument('--size_hidden_layers', type=int, nargs='+', default=[200,2,200], help="The number of hidden neurons per layer")
     parser.add_argument('--batch_size', type=int, default='128', help="The training batch size")
     parser.add_argument('--learning_rate', type=float, default='0.2', help="The training batch size")
     parser.add_argument('--test_frequency', type=int, default='1', help="The number of epochs after which the model is tested")
@@ -93,7 +93,7 @@ def main():
     (X_train, Y_train), (X_test, Y_test) = preprocess(args.dataset)
 
     # Add the size of the input and output layer depending on the dataset
-    size_layers = [X_train.shape[1]] + args.size_hidden_layers + [Y_train.shape[1]]
+    size_layers = [X_train.shape[1]] + args.size_hidden_layers + [X_train.shape[1]]
 
     log_str = ("\n" + "=" * 20 + "\n") + \
         "Running the code with the dataset {}:\n".format(args.dataset) + \
@@ -107,7 +107,7 @@ def main():
     print(log_str)
     with open(os.path.join(experiment_path, 'log.txt'), 'a') as f_:
         f_.write(log_str + '\n')
-
+    print(size_layers)
     # Select the network with the chosen learning algorithm to run
     if args.algo == "bp":
         model = FCNN_BP(size_layers, experiment_path)
@@ -119,7 +119,7 @@ def main():
         model = FCNN_KP(size_layers, experiment_path)
 
     # Run the training
-    model.train(X_train, Y_train, X_test, Y_test, args.batch_size, args.learning_rate, args.n_epochs, args.test_frequency)
+    model.train(X_train, X_train, X_test, X_test, args.batch_size, args.learning_rate, args.n_epochs, args.test_frequency) #two Xtrains and Xtests for implementing autoencoder architecture
 
 
 if __name__ == '__main__':

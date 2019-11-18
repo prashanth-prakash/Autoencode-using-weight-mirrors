@@ -1,0 +1,9 @@
+test_frequency    1
+size_hidden_layers    [50]
+learning_rate    0.05
+batch_size    128
+n_epochs    1000
+seed    1111
+algo    wm
+save_dir    ./experiments
+dataset    mnist

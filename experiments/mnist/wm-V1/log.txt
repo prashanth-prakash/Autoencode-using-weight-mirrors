@@ -1,0 +1,11 @@
+
+====================
+Running the code with the dataset mnist:
+	learning algorithm: wm
+	batch_size: 128
+	learning rate: 0.05
+	n_epochs: 400
+	test frequency: 1
+	size_layers: [784, 500, 10]
+====================
+
